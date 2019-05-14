@@ -12,15 +12,8 @@ public class DisparosApp extends JApplet {
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setTitle("BounceBallApp");
     frame.add(applet, BorderLayout.CENTER);
-    frame.setSize(550, 350);
+    frame.setSize(550, 650);
     frame.setVisible(true);
   }
 }
 
-
-/**
-    * The BounceBallApp class simply places an instance of BallControl in the applet 
-		* The main method is provided in the applet so that you can also run it standalone
-*/
-
-/* vim: set nu:ts=2:sw=2: */

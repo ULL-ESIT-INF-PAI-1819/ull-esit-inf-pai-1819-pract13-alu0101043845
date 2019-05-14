@@ -10,13 +10,13 @@ public class DisparosControl extends JPanel {
 	  private Timer timer = new Timer(delay, new TimerListener());
   private Disparos ball = new Disparos();
   private final JButton btnI = new JButton("i");
+  private final JLabel puntos = new JLabel("0");
 
   public DisparosControl() {
-    // Group buttons in a panel
     JPanel panel = new JPanel();
     panel.add(btnI);
+    panel.add(puntos);
 
-    // Add ball and buttons to the panel
     ball.setBorder(new javax.swing.border.LineBorder(Color.BLACK));
     ball.setBackground(Color.WHITE);
     setLayout(new BorderLayout());
@@ -77,6 +77,7 @@ public class DisparosControl extends JPanel {
   private class TimerListener implements ActionListener {
     /** Handle the action event */
     public void actionPerformed(ActionEvent e) {
+    	puntos.setText("Puntos: " + ball.getEliminadas()*10);
       repaint();
     }
   }
